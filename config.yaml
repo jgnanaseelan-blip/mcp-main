@@ -1,0 +1,27 @@
+host:
+  name: "demo-mcp-server"
+  log_level: "INFO"
+
+server:
+  type: "sse"
+  #auth: "bearer"
+
+sse:
+  host: "0.0.0.0"                  # Listen address
+  port: 80                       # Listen port
+  sse_path: "/sse"                 # SSE endpoint path
+  message_path: "/messages/"       # Message submission path
+  health_path: "/health"           # Health check path
+
+tools:
+  registry_module: "chuk_mcp_runtime.common.mcp_tool_decorator"
+  registry_attr: "TOOLS_REGISTRY"
+  timeout: 300
+
+mcp_servers:
+  tools:
+    enabled: true
+    location: "."
+    tools:
+      module: "mcp-tools"
+      enabled: true
