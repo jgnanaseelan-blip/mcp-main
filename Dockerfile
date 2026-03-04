@@ -35,4 +35,4 @@ USER 1001
 WORKDIR /app
 ENV PATH="/app/.venv/bin:$PATH"
 
-CMD ["sh", "-c", "chuk-mcp-server --config config.yaml"]
+CMD ["sh", "-c", "chuk-mcp-server --config config.yaml --port 8000"]
