@@ -8,7 +8,7 @@ server:
 
 sse:
   host: "0.0.0.0"                  # Listen address
-  port: 80                       # Listen port
+  port: 8000                       # Listen port
   sse_path: "/sse"                 # SSE endpoint path
   message_path: "/messages/"       # Message submission path
   health_path: "/health"           # Health check path
