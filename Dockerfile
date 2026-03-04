@@ -29,10 +29,10 @@ RUN mkdir -p /.local /.cache /.chuk_mcp_artifacts \
     && chmod -R g=u /app /.local /.cache /.chuk_mcp_artifacts \
     && chmod -R 777 /app /.local /.cache /.chuk_mcp_artifacts
 
-EXPOSE 8000
+EXPOSE 8080
 
 USER 1001
 WORKDIR /app
 ENV PATH="/app/.venv/bin:$PATH"
 
-CMD ["sh", "-c", "chuk-mcp-server --config config.yaml --port 8000"]
+CMD ["sh", "-c", "chuk-mcp-server --config config.yaml --port 8080"]
