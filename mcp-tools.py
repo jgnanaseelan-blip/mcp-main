@@ -29,3 +29,28 @@ async def add_numbers(a: float, b: float):
     log.info(f"Response of add_numbers tool: {response}")
 
     return response
+    
+@mcp_tool(name="say_hi")
+async def say_hi(name: str = "User"):
+    """
+    Return a greeting message.
+
+    Args:
+        name (str): Name of the person to greet
+
+    Returns:
+        message (str): Greeting message
+    """
+
+    log.info(f"Calling say_hi tool with name: {name}")
+
+    message = f"Hi {name}! Welcome to the MCP server."
+
+    response = {
+        "name": name,
+        "message": message
+    }
+
+    log.info(f"Response of say_hi tool: {response}")
+
+    return response
