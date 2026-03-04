@@ -1,7 +1,7 @@
 FROM registry.access.redhat.com/ubi9-minimal:9.5-1741850109
-LABEL maintainer="Li Duan" \
-      name="hubbell_mcp" \
-      description="Hubbell MCP Server"
+LABEL maintainer="seelan" \
+      name="mcp_main" \
+      description="MCP Server"
 
 ARG PYTHON_VERSION=3.11
 
